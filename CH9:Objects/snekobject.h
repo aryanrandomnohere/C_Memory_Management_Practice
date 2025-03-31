@@ -1,3 +1,4 @@
+#include <stdbool.h>
 typedef struct SnekObject snek_object_t;
 typedef enum SnekObjectKind {
     INTEGER,
@@ -37,4 +38,4 @@ typedef enum SnekObjectKind {
   snek_object_t *new_snek_vector3(snek_object_t *x, snek_object_t *y,snek_object_t *z);
   snek_object_t *new_snek_array(int size);
   bool snek_array_set(snek_object_t *obj, snek_object_t *value, int index);
-  
+  snek_object_t *snek_array_get(snek_object_t *obj, int index);
