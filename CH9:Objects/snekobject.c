@@ -110,7 +110,7 @@ snek_object_t *obj = malloc(sizeof(snek_object_t));
 if(obj == NULL) { return NULL; }
 obj->kind = ARRAY;
 obj->data.v_array.size = size;
-snek_object_t **array = malloc(sizeof(snek_object_t) * size);
+snek_object_t **array = calloc(size, sizeof(snek_object_t));
 obj->data.v_array.elements = array; 
 return obj;
 }
